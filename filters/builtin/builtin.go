@@ -114,6 +114,7 @@ func MakeRegistry() filters.Registry {
 		logfilter.NewUnverifiedAuditLog(),
 		tracing.NewSpanName(),
 		accesslog.NewAccessLogDisabled(),
+		auth.NewForwardToken(),
 	} {
 		r.Register(s)
 	}
